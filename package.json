@@ -1,8 +1,11 @@
 {
-  "name": "angular-multiselect-dropdown",
+  "name": "angular18-multiselect-dropdown",
   "author": "Ashutosh Kalambe",
   "version": "0.0.1",
-  "license": "MIT",
+  "license": "MIT", 
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

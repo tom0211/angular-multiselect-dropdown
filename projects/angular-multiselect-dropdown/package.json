@@ -1,6 +1,12 @@
 {
-  "name": "angular-multiselect-dropdown",
+  "name": "angular18-multiselect-dropdown",
   "version": "0.0.1",
+  "description": "Angular Multiselect Dropdown",
+  "author": "Ashutosh Kalambe",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "@angular/common": "^18.2.0",
     "@angular/core": "^18.2.0"
