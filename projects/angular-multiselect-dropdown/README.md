@@ -46,7 +46,7 @@ To use this library in your Angular project, follow these steps:
 1. **Add the app-custom-multiselect component to your HTML template**:
 
     ```
-    <app-custom-multiselect
+    <lib-angular-multiselect-dropdown
         [options]="options"
         [selectedOptions]="selectedOptions"
         [placeholder]="'Select options'"
@@ -55,7 +55,7 @@ To use this library in your Angular project, follow these steps:
         [selectAll]="true"
         [disabled]="false"
         (selectionChange)="onSelectionChange($event)">
-    </app-custom-multiselect>
+    </lib-angular-multiselect-dropdown>
     ```
 
 2. **In your component TypeScript file, define the options and handle events**:
