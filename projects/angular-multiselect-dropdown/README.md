@@ -21,7 +21,8 @@ To use this library in your Angular project, follow these steps:
 
 2. **Import the library module in your Angular module**:
     
-    ```import { NgModule } from '@angular/core';
+    ```
+    import { NgModule } from '@angular/core';
     import { BrowserModule } from '@angular/platform-browser';
     import { AppComponent } from './app.component';
     import { CustomMultiselectComponent } from 'angular18-multiselect-dropdown';
@@ -37,13 +38,15 @@ To use this library in your Angular project, follow these steps:
     providers: [],
     bootstrap: [AppComponent]
     })
-    export class AppModule { }```
+    export class AppModule { }
+    ```
 
 ## Usage
 
 1. **Add the app-custom-multiselect component to your HTML template**:
 
-    ```<app-custom-multiselect
+    ```
+    <app-custom-multiselect
         [options]="options"
         [selectedOptions]="selectedOptions"
         [placeholder]="'Select options'"
@@ -52,11 +55,13 @@ To use this library in your Angular project, follow these steps:
         [selectAll]="true"
         [disabled]="false"
         (selectionChange)="onSelectionChange($event)">
-    </app-custom-multiselect>```
+    </app-custom-multiselect>
+    ```
 
 2. **In your component TypeScript file, define the options and handle events**:
 
-    ```import { Component } from '@angular/core';
+    ```
+    import { Component } from '@angular/core';
     import { MultiSelectOption } from 'angular18-multiselect-dropdown';
 
     @Component({
@@ -74,7 +79,8 @@ To use this library in your Angular project, follow these steps:
         onSelectionChange(selectedOptions: MultiSelectOption[]) {
             console.log('Selection changed:', selectedOptions);
         }
-    }```
+    }
+    ```
 
 ## Inputs
 
@@ -96,7 +102,8 @@ To use this library in your Angular project, follow these steps:
 
 1. **HTML**
 
-    ```<app-custom-multiselect
+    ```
+    <app-custom-multiselect
     [options]="[
         { id: 1, text: 'Option 1' },
         { id: 2, text: 'Option 2' },
@@ -108,11 +115,13 @@ To use this library in your Angular project, follow these steps:
     [enableFilter]="true"
     [selectAll]="true"
     (selectionChange)="handleSelectionChange($event)"
-    </app-custom-multiselect>```
+    </app-custom-multiselect>
+    ```
 
 2. **TS**
 
-    ```import { Component } from '@angular/core';
+    ```
+    import { Component } from '@angular/core';
     import { MultiSelectOption } from 'angular18-multiselect-dropdown';
 
     @Component({
@@ -131,7 +140,8 @@ To use this library in your Angular project, follow these steps:
         handleSelectionChange(selectedOptions: MultiSelectOption[]) {
             console.log('Selection changed:', selectedOptions);
         }       
-    }```
+    }
+    ```
 
 
 ## License
