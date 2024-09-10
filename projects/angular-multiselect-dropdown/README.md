@@ -25,12 +25,12 @@ To use this library in your Angular project, follow these steps:
     import { NgModule } from '@angular/core';
     import { BrowserModule } from '@angular/platform-browser';
     import { AppComponent } from './app.component';
-    import { CustomMultiselectComponent } from 'angular18-multiselect-dropdown';
+    import { AngularMultiselectDropdownComponent } from 'angular18-multiselect-dropdown';
 
     @NgModule({
     declarations: [
         AppComponent,
-        CustomMultiselectComponent
+        AngularMultiselectDropdownComponent
     ],
     imports: [
         BrowserModule
