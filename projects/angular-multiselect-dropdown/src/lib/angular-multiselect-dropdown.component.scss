@@ -1,0 +1,284 @@
+// /* Basic container styling */
+// .custom-multiselect {
+//   position: relative;
+//   display: inline-block;
+//   width: 100%;
+//   font-family: Arial, sans-serif;
+// }
+
+// /* Dropdown toggle button styling */
+// .custom-multiselect .toggle-button {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   padding: 8px;
+//   border: 1px solid #ccc;
+//   border-radius: 4px;
+//   background-color: #fff;
+//   cursor: pointer;
+//   transition: background-color 0.2s ease;
+// }
+
+// .custom-multiselect .toggle-button:hover {
+//   background-color: #f1f1f1;
+// }
+
+// /* Dropdown list styling */
+// .custom-multiselect .dropdown-list {
+//   position: absolute;
+//   top: 100%;
+//   left: 0;
+//   right: 0;
+//   max-height: 200px;
+//   overflow-y: auto;
+//   border: 1px solid #ccc;
+//   border-radius: 4px;
+//   background-color: #fff;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   z-index: 1000;
+//   display: none; /* Hide by default */
+// }
+
+// .custom-multiselect .dropdown-list.show {
+//   display: block; /* Show when dropdown is open */
+// }
+
+// /* Dropdown item styling */
+// .custom-multiselect .dropdown-item {
+//   padding: 8px;
+//   cursor: pointer;
+//   transition: background-color 0.2s ease;
+// }
+
+// .custom-multiselect .dropdown-item:hover {
+//   background-color: #f1f1f1;
+// }
+
+// /* Selected items styling */
+// .custom-multiselect .selected-items {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 4px;
+// }
+
+// .custom-multiselect .selected-item {
+//   background-color: #35b0d5;
+//   color: #fff;
+//   border-radius: 4px;
+//   padding: 4px 8px;
+//   display: flex;
+//   align-items: center;
+//   font-size: 14px;
+// }
+
+// .custom-multiselect .selected-item .remove-item {
+//   margin-left: 4px;
+//   cursor: pointer;
+// }
+
+// /* Search input styling */
+// .custom-multiselect .search-input {
+//   width: 100%;
+//   padding: 8px;
+//   border: 1px solid #ccc;
+//   border-radius: 4px;
+//   box-sizing: border-box;
+//   margin-bottom: 8px;
+// }
+
+
+
+/* Container styling */
+.custom-multiselect {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  /* Dropdown toggle button styling */
+  .custom-multiselect .toggle-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .custom-multiselect .toggle-button:hover {
+    background-color: #f9f9f9;
+    border-color: #35b0d5; /* Highlight on hover */
+  }
+  
+  .custom-multiselect .toggle-button:focus {
+    outline: none;
+    border-color: #35b0d5;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Dropdown list styling */
+  .custom-multiselect .dropdown-list {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+    padding: 8px;
+  }
+  
+  .custom-multiselect .dropdown-list.show {
+    display: block;
+  }
+  
+  /* Dropdown item styling */
+  .custom-multiselect .dropdown-item {
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+  }
+  
+  .custom-multiselect .dropdown-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Selected items styling */
+  .custom-multiselect .selected-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  
+  .custom-multiselect .selected-item {
+    background-color: #35b0d5;
+    color: #fff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 1;
+  }
+  
+  .custom-multiselect .selected-item .remove-item {
+    margin-left: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
+  .custom-multiselect .selected-item .remove-item:hover {
+    color: #ff6b6b;
+  }
+  
+  /* Search input styling */
+  .custom-multiselect .search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .custom-multiselect .search-input:focus {
+    border-color: #35b0d5;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Scrollbar for dropdown */
+  .custom-multiselect .dropdown-list::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .custom-multiselect .dropdown-list::-webkit-scrollbar-thumb {
+    background-color: #35b0d5;
+    border-radius: 4px;
+  }
+  
+  .custom-multiselect .dropdown-list::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  /* No options found message */
+  .custom-multiselect .no-options {
+    padding: 12px;
+    text-align: center;
+    color: #999;
+    font-style: italic;
+  }
+  
+  .custom-multiselect.disabled .toggle-button {
+    background-color: #f1f1f1;
+    cursor: not-allowed;
+  }
+  
+  .no-data-found {
+    padding: 8px;
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+  }
+  
+  
+  /* Select/Deselect All Buttons */
+  .custom-multiselect .select-all-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    padding: 0 8px;
+  }
+  
+  .custom-multiselect .select-all-buttons button {
+    background-color: #35b0d5;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    flex: 1;
+    margin: 0 4px;
+  }
+  
+  .custom-multiselect .select-all-buttons button:first-child {
+    margin-left: 0;
+  }
+  
+  .custom-multiselect .select-all-buttons button:last-child {
+    margin-right: 0;
+  }
+  
+  .custom-multiselect .select-all-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  .custom-multiselect .select-all-buttons button:active {
+    transform: scale(0.98);
+  }
+  
+  .custom-multiselect .select-all-buttons button:disabled {
+    background-color: #e0e0e0;
+    color: #b0b0b0;
+    cursor: not-allowed;
+  }
+  
+  .custom-multiselect .dropdown-item input[type="checkbox"]:checked {
+    accent-color: #35b0d5; /* Color when checked */
+    color: white;
+  }

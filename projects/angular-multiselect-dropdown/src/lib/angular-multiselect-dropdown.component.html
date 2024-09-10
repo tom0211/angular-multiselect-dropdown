@@ -1,0 +1,53 @@
+<div class="custom-multiselect">
+    <!-- Dropdown Toggle Button -->
+    <div class="toggle-button" (click)="toggleDropdown()">
+      <div class="selected-items">
+        <ng-container *ngIf="selectedOptions.length > 0; else placeholderText">
+          <div *ngFor="let item of selectedOptions" class="selected-item">
+            {{ item.text }}
+            <span class="remove-item" (click)="removeSelected(item, $event)">x</span>
+          </div>
+        </ng-container>
+        <ng-template #placeholderText>
+          <span class="placeholder">{{ placeholder }}</span>
+        </ng-template>
+      </div>
+      <span class="arrow">&#9660;</span> <!-- Dropdown arrow -->
+    </div>
+  
+    <!-- Dropdown Menu -->
+    <div class="dropdown-list" [ngClass]="{'show': dropdownOpen}">
+      <div *ngIf="selectAll" class="select-all-buttons">
+        <button (click)="selectAllOptions()">Select All</button>
+        <button (click)="deselectAllOptions()">Deselect All</button>
+      </div>
+      
+      <input
+        *ngIf="enableFilter"
+        type="text"
+        class="search-input"
+        (input)="onSearchChange($event)"
+        placeholder="Search..."
+      />
+  
+      <!-- No Data Found Message -->
+      <div *ngIf="filterOptions().length === 0" class="no-data-found">
+        No data found
+      </div>
+  
+      <!-- Dropdown Items -->
+      <div *ngFor="let option of filterOptions()" class="dropdown-item" [class.disabled]="option.disabled" (click)="onOptionSelect(option)">
+        <label>
+          <input
+            type="checkbox"
+            [checked]="isSelected(option)"
+            (change)="onOptionSelect(option)"
+            [disabled]="option.disabled"
+            [value]="option.id"
+          />
+          {{ option.text }}
+        </label>
+      </div>
+    </div>
+  </div>
+  
